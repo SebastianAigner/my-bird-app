@@ -70,7 +70,7 @@ fun BirdsPage(viewModel: BirdsViewModel) {
                     onClick = {
                         viewModel.selectCategory(category)
                     },
-                    modifier = Modifier.aspectRatio(1.0f).fillMaxSize().weight(1.0f),
+                    modifier = Modifier.fillMaxWidth().weight(1.0f),
                     elevation = ButtonDefaults.elevation(
                         defaultElevation = 0.dp,
                         focusedElevation = 0.dp
@@ -83,7 +83,7 @@ fun BirdsPage(viewModel: BirdsViewModel) {
         }
         AnimatedVisibility(uiState.selectedImages.isNotEmpty()) {
             LazyVerticalGrid(
-                columns = GridCells.Fixed(2),
+                columns = GridCells.Adaptive(150.dp),
                 horizontalArrangement = Arrangement.spacedBy(5.dp),
                 verticalArrangement = Arrangement.spacedBy(5.dp),
                 modifier = Modifier.fillMaxSize().padding(horizontal = 5.dp),
