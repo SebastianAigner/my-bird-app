@@ -55,6 +55,46 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		51E741540527C689BF7747F2 /* Sebastian.Aigner.xcuserdatad */ = {
+			isa = PBXGroup;
+			children = (
+				51E74398ABE0B24C2DDAC246 /* xcschemes */,
+			);
+			name = Sebastian.Aigner.xcuserdatad;
+			path = iosApp.xcodeproj/xcuserdata/Sebastian.Aigner.xcuserdatad;
+			sourceTree = "<group>";
+		};
+		51E74398ABE0B24C2DDAC246 /* xcschemes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = xcschemes;
+			sourceTree = "<group>";
+		};
+		51E7485FBB4DE07FB3C34A28 /* Sebastian.Aigner.xcuserdatad */ = {
+			isa = PBXGroup;
+			children = (
+				51E74F6ED26460A0CED46887 /* xcschemes */,
+			);
+			path = Sebastian.Aigner.xcuserdatad;
+			sourceTree = "<group>";
+		};
+		51E74D66BFA2627A9C33015F /* xcuserdata */ = {
+			isa = PBXGroup;
+			children = (
+				51E7485FBB4DE07FB3C34A28 /* Sebastian.Aigner.xcuserdatad */,
+			);
+			name = xcuserdata;
+			path = iosApp.xcworkspace/xcuserdata;
+			sourceTree = "<group>";
+		};
+		51E74F6ED26460A0CED46887 /* xcschemes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = xcschemes;
+			sourceTree = "<group>";
+		};
 		7555FF72242A565900829871 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +103,8 @@
 				7555FF7C242A565900829871 /* Products */,
 				FEFF387C0A8D172AA4D59CAE /* Pods */,
 				42799AB246E5F90AF97AA0EF /* Frameworks */,
+				51E74D66BFA2627A9C33015F /* xcuserdata */,
+				51E741540527C689BF7747F2 /* Sebastian.Aigner.xcuserdatad */,
 			);
 			sourceTree = "<group>";
 		};

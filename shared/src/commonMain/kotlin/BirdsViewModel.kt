@@ -12,14 +12,14 @@ import model.BirdImage
 
 data class BirdsUiState(
     val images: List<BirdImage> = emptyList(),
-    val selectedCategory: String? = null
+    val selectedCategory: String? = null,
 ) {
     val categories = images.map { it.category }.toSet()
     val selectedImages = images.filter { it.category == selectedCategory }
 }
 
 class BirdsViewModel : ViewModel() {
-    private val _uiState = MutableStateFlow<BirdsUiState>(BirdsUiState())
+    private val _uiState = MutableStateFlow(BirdsUiState())
     val uiState = _uiState.asStateFlow()
 
     private val httpClient = HttpClient {
@@ -28,17 +28,17 @@ class BirdsViewModel : ViewModel() {
         }
     }
 
-    init {
-        updateImages()
-    }
-
     override fun onCleared() {
         httpClient.close()
     }
 
     fun selectCategory(category: String) {
-        _uiState.update {
-            it.copy(selectedCategory = category)
+        _uiState.update { state ->
+            if (state.selectedCategory == category) {
+                state.copy(selectedCategory = null)
+            } else {
+                state.copy(selectedCategory = category)
+            }
         }
     }
 

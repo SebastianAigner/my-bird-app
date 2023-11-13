@@ -34,7 +34,7 @@ kotlin {
                 implementation(compose.material)
                 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
                 implementation(compose.components.resources)
-                implementation("media.kamel:kamel-image:0.6.0")
+                implementation("media.kamel:kamel-image:0.8.3")
                 implementation("io.ktor:ktor-client-core:2.3.1")
                 implementation("io.ktor:ktor-client-content-negotiation:2.3.1")
                 implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.1")

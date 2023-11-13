@@ -1,0 +1,15 @@
+{
+    "configurations": [
+        {
+            "name": "customiosconfig",
+            "type": "xcode-app",
+            "workingDir": "$PROJECT_DIR$",
+            "buildTarget": {
+                "project": "iosApp",
+                "target": "iosApp"
+            },
+            "configuration": "Debug",
+            "destination": "iPhone 15 Pro | iOS 17.0"
+        }
+    ]
+}
