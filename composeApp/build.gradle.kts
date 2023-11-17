@@ -45,6 +45,7 @@ kotlin {
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.ktor.client.okhttp)
+            implementation(libs.kotlinx.coroutines.swing)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
