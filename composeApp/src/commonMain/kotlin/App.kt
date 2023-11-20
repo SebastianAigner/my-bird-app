@@ -67,12 +67,12 @@ fun BirdsPage(viewModel: BirdsViewModel) {
         Row(
             horizontalArrangement = Arrangement.spacedBy(5.dp),
             modifier = Modifier.fillMaxWidth().padding(5.dp),
-            ) {
+        ) {
             for (category in uiState.categories) {
                 Button(
                     onClick = { viewModel.selectCategory(category) },
                     modifier = Modifier.aspectRatio(1.0f).weight(1.0f),
-                    ) {
+                ) {
                     Text(category)
                 }
             }
@@ -90,7 +90,7 @@ fun BirdsPage(viewModel: BirdsViewModel) {
                 verticalArrangement = Arrangement.spacedBy(5.dp),
                 modifier = Modifier.fillMaxSize().padding(horizontal = 5.dp),
                 state = lazyGridState,
-                ) {
+            ) {
                 items(uiState.selectedImages, key = { it.path }) { image ->
                     BirdImageCell(image)
                 }
@@ -106,5 +106,5 @@ fun BirdImageCell(image: BirdImage) {
         contentDescription = "${image.category} by ${image.author}",
         contentScale = ContentScale.Crop,
         modifier = Modifier.fillMaxWidth().aspectRatio(1.0f),
-        )
+    )
 }
