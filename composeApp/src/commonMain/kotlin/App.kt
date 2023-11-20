@@ -61,7 +61,7 @@ fun BirdsPage(viewModel: BirdsViewModel) {
     Column(
         Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
+        verticalArrangement = Arrangement.Center,
     ) {
 
         Row(
@@ -78,12 +78,12 @@ fun BirdsPage(viewModel: BirdsViewModel) {
             }
         }
 
-        val lazyGridState = rememberLazyGridState()
-        LaunchedEffect(uiState.selectedCategory) {
-            lazyGridState.animateScrollToItem(index = 0)
-        }
-
         AnimatedVisibility(visible = uiState.selectedImages.isNotEmpty()) {
+            val lazyGridState = rememberLazyGridState()
+            LaunchedEffect(uiState.selectedCategory) {
+                lazyGridState.animateScrollToItem(index = 0)
+            }
+
             LazyVerticalGrid(
                 columns = GridCells.Adaptive(180.dp),
                 horizontalArrangement = Arrangement.spacedBy(5.dp),
@@ -91,8 +91,8 @@ fun BirdsPage(viewModel: BirdsViewModel) {
                 modifier = Modifier.fillMaxSize().padding(horizontal = 5.dp),
                 state = lazyGridState,
                 ) {
-                items(uiState.selectedImages, key = { it.path }) {
-                    BirdImageCell(it)
+                items(uiState.selectedImages, key = { it.path }) { image ->
+                    BirdImageCell(image)
                 }
             }
         }
